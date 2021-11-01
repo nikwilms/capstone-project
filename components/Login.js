@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import Button from './Button';
 
 const Login = () => {
   return (
@@ -11,7 +12,7 @@ const Login = () => {
 
       <Link href='/dashboard'>
         <a>
-          <StyledButton type='submit'>Login</StyledButton>
+          <Button type='submit' name='Login' />
         </a>
       </Link>
     </LoginStyle>

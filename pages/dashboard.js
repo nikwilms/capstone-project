@@ -10,9 +10,9 @@ const Dashboard = () => {
       {/* later on, userName gets input from DB */}
       <Welcome greeting='Welcome' userName='Jan' />
       {/* later on, isChecked gets input from DB */}
-      <Reminder isChecked={true} />
-      <RoomOrDesk option1='Room' option2='Desk' />
-      <Footer nav1='Dashboard' nav2='Bookings' nav3='On-Site' />
+      <Reminder isChecked={false} />
+      <RoomOrDesk option={['Room', 'Desk']} />
+      <Footer nav={['Dashboard', 'Bookings', 'On-Site']} />
     </>
   );
 };
