@@ -4,32 +4,27 @@ import styled from 'styled-components';
 
 const Login = () => {
   return (
-    <ContainerStyle>
-      <LoginStyle>
-        <h2>Please Sign In</h2>
-        <StyledInput type='email' placeholder='email' />
-        <StyledInput type='password' placeholder='password' />
+    <LoginStyle>
+      <h2>Please Sign In</h2>
+      <StyledInput type='email' placeholder='email' />
+      <StyledInput type='password' placeholder='password' />
 
-        <Link href='/dashboard'>
-          <a>
-            <StyledButton type='submit'>Login</StyledButton>
-          </a>
-        </Link>
-      </LoginStyle>
-    </ContainerStyle>
+      <Link href='/dashboard'>
+        <a>
+          <StyledButton type='submit'>Login</StyledButton>
+        </a>
+      </Link>
+    </LoginStyle>
   );
 };
-
-const ContainerStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-`;
 
 const LoginStyle = styled.form`
   border: none;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const StyledInput = styled.input`
@@ -47,6 +42,7 @@ const StyledButton = styled.button`
   background: #72cf97;
   color: white;
   padding: 0.5rem;
+  margin-top: 0.5rem;
   width: 100%;
   border-radius: 5px;
   text-align: center;
