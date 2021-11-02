@@ -10,9 +10,10 @@ const StyledButton = styled.button`
   background: #72cf97;
   color: white;
   padding: 0.5rem;
-  margin-top: 0.5rem;
+
   border-radius: 5px;
   text-align: center;
+  align-items: center;
 `;
 
 export default Button;
