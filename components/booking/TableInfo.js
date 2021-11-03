@@ -1,11 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const TableInfo = () => {
   return (
-    <section>
+    <StyledSection>
       <h2>This desk has no bookings</h2>
-    </section>
+    </StyledSection>
   );
 };
+
+const StyledSection = styled.section`
+  text-align: center;
+`;
 
 export default TableInfo;
