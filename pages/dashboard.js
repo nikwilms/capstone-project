@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import Welcome from '../components/dashboard/Welcome';
+
 import Reminder from '../components/dashboard/Reminder';
 import RoomOrDesk from '../components/dashboard/RoomOrDesk';
-import Footer from '../components/Footer';
 import RoomRen from '../components/dashboard/roommaps/RoomRen';
 import Content from '../components/Content';
+import Booking from './booking';
 
 const Dashboard = () => {
   //put is later on in a JSON and fetch the data
+  //for each floor, choose desk or room
   const deskFloorOne = [
     { desk: '01', isBooked: false },
     { desk: '02', isBooked: false },

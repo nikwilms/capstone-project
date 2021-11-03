@@ -1,12 +1,21 @@
 import React from 'react';
 import Seat from './Seat';
 import styled from 'styled-components';
+import Link from 'next/dist/client/link';
 
 const RoomRen = ({ selected }) => {
   return (
     <Wrapper>
       {selected.map((selections) => {
-        return <Seat name={selections.desk} key={selections.desk} />;
+        return (
+          <>
+            <Link href={'/booking/' + selections.desk}>
+              <a>
+                <Seat name={selections.desk} key={selections.desk} />
+              </a>
+            </Link>
+          </>
+        );
       })}
     </Wrapper>
   );
