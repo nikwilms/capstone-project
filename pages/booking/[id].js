@@ -16,7 +16,7 @@ const Details = () => {
 
   return (
     <Content title={router.query.id} seeFooter={false}>
-      <TableInfo />
+      <TableInfo isBooked={isBooked} getTime={time} getDay={day} />
     </Content>
   );
 };
