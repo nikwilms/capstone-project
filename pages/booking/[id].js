@@ -1,7 +1,9 @@
 import { useRouter } from 'next/dist/client/router';
 import React from 'react';
 
-//import JSON
+import TableInfo from '../../components/booking/TableInfo';
+
+//import JSON with room and desk information
 
 import Content from '../../components/Content';
 // export const getStaticPaths = async () => {};
@@ -14,7 +16,7 @@ const Details = () => {
 
   return (
     <Content title={router.query.id} seeFooter={false}>
-      <h1>Details page</h1>
+      <TableInfo />
     </Content>
   );
 };

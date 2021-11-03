@@ -5,7 +5,6 @@ import Reminder from '../components/dashboard/Reminder';
 import RoomOrDesk from '../components/dashboard/RoomOrDesk';
 import RoomRen from '../components/dashboard/roommaps/RoomRen';
 import Content from '../components/Content';
-import Booking from './booking';
 
 const Dashboard = () => {
   //put is later on in a JSON and fetch the data
