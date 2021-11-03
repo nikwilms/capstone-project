@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Login = () => {
   return (
-    <LoginStyle>
+    <StyledLogin>
       <h2>Please Sign In</h2>
       <StyledInput type='email' placeholder='email' />
       <StyledInput type='password' placeholder='password' />
@@ -14,11 +14,11 @@ const Login = () => {
           <StyledButton type='submit'>Login</StyledButton>
         </a>
       </Link>
-    </LoginStyle>
+    </StyledLogin>
   );
 };
 
-const LoginStyle = styled.form`
+const StyledLogin = styled.form`
   border: none;
   text-align: left;
   display: flex;
