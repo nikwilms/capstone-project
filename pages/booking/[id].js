@@ -13,7 +13,7 @@ const Details = () => {
   const router = useRouter();
 
   return (
-    <Content title={router.query.id}>
+    <Content title={router.query.id} seeFooter={false}>
       <h1>Details page</h1>
     </Content>
   );

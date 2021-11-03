@@ -24,7 +24,7 @@ const Dashboard = () => {
   return (
     <>
       {/* later on, userName gets input from DB */}
-      <Content title={'Welcome Jan'}>
+      <Content title={'Welcome Jan'} seeFooter={true}>
         {/* later on, isChecked gets input from DB */}
         <Reminder isChecked={false} />
         <FlexWrapper>
