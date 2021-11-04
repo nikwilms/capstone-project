@@ -15,8 +15,8 @@ const Details = () => {
   const router = useRouter();
 
   return (
-    <Content title={router.query.id} seeFooter={false}>
-      <TableInfo isBooked={isBooked} getTime={time} getDay={day} />
+    <Content title={router.query.id} hasFooter={false}>
+      <TableInfo isBooked={isBooked} getTime={time} getDay={date} />
     </Content>
   );
 };
