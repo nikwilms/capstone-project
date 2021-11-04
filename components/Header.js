@@ -1,9 +1,4 @@
-import React from 'react';
 import styled from 'styled-components';
-
-const Header = ({ title }) => {
-  return <StyledHeader>{title}</StyledHeader>;
-};
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -16,4 +11,4 @@ const StyledHeader = styled.header`
   margin: 0;
 `;
 
-export default Header;
+export default StyledHeader;

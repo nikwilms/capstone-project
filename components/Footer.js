@@ -18,7 +18,7 @@ const Footer = () => {
   );
 };
 
-const StyledNav = styled.ul`
+const StyledNav = styled.footer`
   position: fixed;
   width: 100vw;
   bottom: 0;
