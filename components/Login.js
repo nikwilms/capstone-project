@@ -12,7 +12,7 @@ const Login = () => {
 
       <Link href='/dashboard'>
         <a>
-          <Button type='submit' name='Login' />
+          <Button type='submit'>Login</Button>
         </a>
       </Link>
     </LoginStyle>

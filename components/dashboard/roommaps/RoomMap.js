@@ -2,7 +2,7 @@ import React from 'react';
 import Seat from './Seat';
 import styled from 'styled-components';
 
-const RoomRen = ({ selected }) => {
+const RoomMap = ({ selected }) => {
   return (
     <Wrapper>
       {selected.map((selections) => {
@@ -20,4 +20,4 @@ const Wrapper = styled.div`
   row-gap: 0.5rem;
 `;
 
-export default RoomRen;
+export default RoomMap;

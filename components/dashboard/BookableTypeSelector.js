@@ -1,16 +1,16 @@
 import React from 'react';
 import Button from '../Button';
-import List from '../List';
+import FloorList from '../FloorList';
 import styled from 'styled-components';
 
-const RoomOrDesk = () => {
+const BookableTypeSelector = () => {
   return (
     <>
       <StyledSection>
-        <Button buttonType='button' name='Room' />
-        <Button buttonType='button' name='Desk' />
+        <Button type='button'>Room</Button>
+        <Button type='button'>Desk</Button>
       </StyledSection>
-      <List optionValue={['floor 1', 'floor 2']} />
+      <FloorList optionValues={['floor 1', 'floor 2']} />
     </>
   );
 };
@@ -21,4 +21,4 @@ const StyledSection = styled.section`
   width: 100%;
 `;
 
-export default RoomOrDesk;
+export default BookableTypeSelector;

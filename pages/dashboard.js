@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Welcome from '../components/dashboard/Welcome';
-import Reminder from '../components/dashboard/Reminder';
-import RoomOrDesk from '../components/dashboard/RoomOrDesk';
-import Footer from '../components/Footer';
-import RoomRen from '../components/dashboard/roommaps/RoomRen';
+import CheckInReminder from '../components/dashboard/CheckInReminder';
+import BookableTypeSelector from '../components/dashboard/BookableTypeSelector';
+import RoomMap from '../components/dashboard/roommaps/RoomMap';
 import Content from '../components/Content';
 
 const Dashboard = () => {
@@ -25,10 +23,10 @@ const Dashboard = () => {
       {/* later on, userName gets input from DB */}
       <Content title={'Welcome Jan'}>
         {/* later on, isChecked gets input from DB */}
-        <Reminder isChecked={false} />
+        <CheckInReminder isChecked={false} />
         <FlexWrapper>
-          <RoomOrDesk />
-          <RoomRen selected={deskFloorOne} />
+          <BookableTypeSelector />
+          <RoomMap selected={deskFloorOne} />
         </FlexWrapper>
       </Content>
     </>

@@ -2,9 +2,7 @@ import React from 'react';
 import Link from 'next/dist/client/link';
 import styled from 'styled-components';
 
-const Footer = ({ isVisible }) => {
-  const mock = isVisible;
-
+const Footer = () => {
   return (
     <StyledNav>
       <Link href='/dashboard'>

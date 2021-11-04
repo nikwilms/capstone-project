@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = ({ name, buttonType }) => {
-  return <StyledButton type={buttonType}>{name}</StyledButton>;
-};
-
 const StyledButton = styled.button`
   all: unset;
   background: #72cf97;
@@ -16,4 +12,4 @@ const StyledButton = styled.button`
   align-items: center;
 `;
 
-export default Button;
+export default StyledButton;
