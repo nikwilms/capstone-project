@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/dist/client/link';
 import styled from 'styled-components';
 
-const Footer = ({ isVisible }) => {
+const Footer = () => {
   return (
     <StyledNav>
       <Link href='/dashboard'>
@@ -18,7 +18,7 @@ const Footer = ({ isVisible }) => {
   );
 };
 
-const StyledNav = styled.ul`
+const StyledNav = styled.footer`
   position: fixed;
   width: 100vw;
   bottom: 0;

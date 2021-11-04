@@ -24,12 +24,12 @@ const Dashboard = () => {
   return (
     <>
       {/* later on, userName gets input from DB */}
-      <Content title={'Welcome Jan'} seeFooter={true}>
+      <Content title={'Welcome Jan'} hasFooter={true}>
         {/* later on, isChecked gets input from DB */}
         <Reminder isChecked={false} />
         <FlexWrapper>
           <RoomOrDesk />
-          <RoomRen selected={deskFloorOne} />
+          <RoomRen deskFloorOne={deskFloorOne} />
         </FlexWrapper>
       </Content>
     </>

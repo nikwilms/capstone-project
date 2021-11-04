@@ -3,15 +3,15 @@ import Seat from './Seat';
 import styled from 'styled-components';
 import Link from 'next/dist/client/link';
 
-const RoomRen = ({ selected }) => {
+const RoomRen = ({ deskFloorOne }) => {
   return (
     <Wrapper>
-      {selected.map((selections) => {
+      {deskFloorOne.map((desk) => {
         return (
           <>
-            <Link href={'/booking/' + selections.desk}>
+            <Link href={'/booking/' + desk}>
               <a>
-                <Seat name={selections.desk} key={selections.desk} />
+                <Seat name={desk} key={desk} />
               </a>
             </Link>
           </>
