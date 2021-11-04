@@ -4,7 +4,6 @@ import CheckInReminder from '../components/dashboard/CheckInReminder';
 import BookableTypeSelector from '../components/dashboard/BookableTypeSelector';
 import RoomMap from '../components/dashboard/roommaps/RoomMap';
 import Content from '../components/Content';
-import Booking from './booking';
 
 const Dashboard = () => {
   //put is later on in a JSON and fetch the data

@@ -1,0 +1,100 @@
+{
+  "floor1": [
+    {
+      "slug": "desk-01",
+      "name": "Desk 1",
+      "isBooked": "true",
+      "bookedBy": "User1",
+      "time": "17:00-19:00",
+      "date": "02-05-2022"
+    },
+    {
+      "slug": "desk-02",
+      "name": "Desk 2",
+      "isBooked": "true",
+      "bookedBy": "Student2",
+      "time": "17:00-19:00",
+      "date": "02-07-2022"
+    },
+    {
+      "slug": "desk-03",
+      "name": "Desk 3",
+      "isBooked": "false",
+      "bookedBy": "",
+      "time": "",
+      "date": ""
+    },
+    {
+      "slug": "desk-04",
+      "name": "Desk 4",
+      "isBooked": "false",
+      "bookedBy": "",
+      "time": "",
+      "date": ""
+    },
+    {
+      "slug": "desk-05",
+      "name": "Desk 5",
+      "isBooked": "true",
+      "bookedBy": "Student1",
+      "time": "09:00-17:00",
+      "date": "04-08-2022"
+    },
+    {
+      "slug": "desk-06",
+      "name": "Desk 6",
+      "isBooked": "true",
+      "bookedBy": "Student45",
+      "time": "09:00-13:00",
+      "date": "04-09-2022"
+    },
+    {
+      "slug": "desk-07",
+      "name": "Desk 7",
+      "isBooked": "true",
+      "bookedBy": "Student32",
+      "time": "09:00-11:00",
+      "date": "01-03-2022"
+    },
+    {
+      "slug": "desk-08",
+      "name": "Desk 8",
+      "isBooked": "true",
+      "bookedBy": "Student99",
+      "time": "09:00-13:00",
+      "date": "02-09-2022"
+    },
+    {
+      "slug": "desk-09",
+      "name": "Desk 9",
+      "isBooked": "false",
+      "bookedBy": "",
+      "time": "",
+      "date": ""
+    },
+    {
+      "slug": "desk-10",
+      "name": "Desk 10",
+      "isBooked": "false",
+      "bookedBy": "",
+      "time": "",
+      "date": ""
+    },
+    {
+      "slug": "desk-11",
+      "name": "Desk 11",
+      "isBooked": "true",
+      "bookedBy": "Student142",
+      "time": "13:00-14:00",
+      "date": "06-09-2022"
+    },
+    {
+      "slug": "desk-12",
+      "name": "Desk 12",
+      "isBooked": "true",
+      "bookedBy": "Student65",
+      "time": "13:30-15:30",
+      "date": "06-02-2022"
+    }
+  ]
+}
