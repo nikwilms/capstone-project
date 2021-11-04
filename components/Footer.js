@@ -18,7 +18,7 @@ const Footer = ({ isVisible }) => {
   );
 };
 
-const StyledNav = styled.ul`
+const StyledNav = styled.footer`
   position: fixed;
   width: 100vw;
   bottom: 0;
