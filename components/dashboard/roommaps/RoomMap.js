@@ -1,23 +1,59 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Seat from './Seat';
 import styled from 'styled-components';
 import Link from 'next/dist/client/link';
+import BookableTypeSelector from '../BookableTypeSelector';
 
-const RoomMap = ({ deskFloorOne }) => {
+const RoomMap = ({ bookableObjects }) => {
+  const [filteredBookableObjects, setFilteredBookableObjects] = useState(
+    bookableObjects
+  );
+
+  const filterByRoom = () => {
+    // filteredBookableObjects.filter()
+    setFilteredBookableObjects(
+      bookableObjects.filter((object) => object.type === 'room')
+    );
+  };
+
+  const filterByDesksFloor1 = () => {
+    // filteredBookableObjects.filter()
+    setFilteredBookableObjects(
+      bookableObjects.filter(
+        (object) => object.type === 'desk' && object.floor === 1
+      )
+    );
+  };
+
+  const filterByDesksFloor2 = () => {
+    // filteredBookableObjects.filter()
+    setFilteredBookableObjects(
+      bookableObjects.filter(
+        (object) => object.type === 'desk' && object.floor === 2
+      )
+    );
+  };
+
   return (
-    <Wrapper>
-      {deskFloorOne.map((desk) => {
-        return (
-          <>
-            <Link href={'/booking/' + desk}>
+    <>
+      <BookableTypeSelector
+        filterByRoom={filterByRoom}
+        filterByDesksFloor1={filterByDesksFloor1}
+        filterByDesksFloor2={filterByDesksFloor2}
+      />
+      <Wrapper>
+        {filteredBookableObjects.map((name) => {
+          return (
+            //takes the structure from /pages/booking/
+            <Link key={name.id} href={'/booking/' + name.name}>
               <a>
-                <Seat name={desk} key={desk} />
+                <Seat name={name.name} />
               </a>
             </Link>
-          </>
-        );
-      })}
-    </Wrapper>
+          );
+        })}
+      </Wrapper>
+    </>
   );
 };
 
