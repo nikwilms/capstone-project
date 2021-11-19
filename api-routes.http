@@ -1,3 +1,13 @@
 ### Responds with a singular todo matching the provided id as a JSON Object
 ### handled by pages/api/overviewTableDesk.js
 GET http://localhost:3000/api/overviewTableDesk HTTP/1.1
+
+###
+POST http://localhost:3000/api/booking/bookingProcess HTTP/1.1 
+content-type: application/json
+
+{
+    "bookableObject": "desk-1",
+    "startDate": "Wed, 21 Oct 2023 18:27:50 GMT",
+    "endDate": "Wed, 21 Oct 2024 18:27:50 GMT"
+}

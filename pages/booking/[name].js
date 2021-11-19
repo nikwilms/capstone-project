@@ -1,22 +1,23 @@
-import { useRouter } from 'next/dist/client/router';
 import React, { useEffect } from 'react';
-
+import DayTime from '../../components/booking/DayTime';
 import TableInfo from '../../components/booking/TableInfo';
-
 import Content from '../../components/Content';
 import {
   getBookableObjects,
   getBookableObjectByName,
 } from '../../utils/getTableDesk';
+import { useRouter } from 'next/router';
+import styled from 'styled-components';
 
-//find same ID compared with router.query.id
+const Booking = ({ data }) => {
+  const router = useRouter();
 
-// useEffect vs serverSide ... faster rendering
-
-const Details = ({ data }) => {
   return (
-    <Content title={data.name} hasFooter={false}>
-      <TableInfo bookingInfo={data.booking} />
+    <Content title={data.name} hasFooter={true}>
+      <ul>
+        <TableInfo bookableObjectName={router.query.name} />
+      </ul>
+      <DayTime bookableObject={router.query.name} />
     </Content>
   );
 };
@@ -35,13 +36,16 @@ export async function getStaticPaths() {
   const res = await getBookableObjects();
   console.log(res);
 
-  const paths = res.map((deskOrRoom) => {
-    return { params: { name: deskOrRoom.name } };
-  });
+  const paths = res
+    .filter(({ name }) => name)
+    .map(({ name }) => {
+      console.log(res);
+      return { params: { name: name } };
+    });
   return {
     paths,
     fallback: false,
   };
 }
 
-export default Details;
+export default Booking;

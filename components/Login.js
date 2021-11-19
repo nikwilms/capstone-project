@@ -26,6 +26,7 @@ const StyledLogin = styled.form`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 15rem;
 `;
 
 const StyledInput = styled.input`
@@ -36,17 +37,6 @@ const StyledInput = styled.input`
   background-color: lightgrey;
   border: none;
   border-radius: 5px;
-`;
-
-const StyledButton = styled.button`
-  all: unset;
-  background: #72cf97;
-  color: white;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  width: 100%;
-  border-radius: 5px;
-  text-align: center;
 `;
 
 export default Login;

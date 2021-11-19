@@ -5,8 +5,7 @@ export async function getBookableObjects() {
   await client.connect();
   const db = client.db('desk-booking');
   const collection = db.collection('bookableObject');
-  const data = await collection.find().sort({ name: 1 }).toArray();
-  console.log(data);
+  const data = await collection.find().toArray();
   return data;
 }
 
@@ -16,6 +15,5 @@ export async function getBookableObjectByName(name) {
   const db = client.db('desk-booking');
   const collection = db.collection('bookableObject');
   const data = await collection.findOne({ name });
-  console.log(data);
   return data;
 }

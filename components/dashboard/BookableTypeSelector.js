@@ -27,7 +27,6 @@ const BookableTypeSelector = ({
 const StyledSection = styled.section`
   display: flex;
   justify-content: space-evenly;
-
   width: 100%;
 `;
 

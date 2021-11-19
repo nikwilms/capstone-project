@@ -10,14 +10,12 @@ const RoomMap = ({ bookableObjects }) => {
   );
 
   const filterByRoom = () => {
-    // filteredBookableObjects.filter()
     setFilteredBookableObjects(
       bookableObjects.filter((object) => object.type === 'room')
     );
   };
 
   const filterByDesksFloor1 = () => {
-    // filteredBookableObjects.filter()
     setFilteredBookableObjects(
       bookableObjects.filter(
         (object) => object.type === 'desk' && object.floor === 1
@@ -26,13 +24,14 @@ const RoomMap = ({ bookableObjects }) => {
   };
 
   const filterByDesksFloor2 = () => {
-    // filteredBookableObjects.filter()
     setFilteredBookableObjects(
       bookableObjects.filter(
         (object) => object.type === 'desk' && object.floor === 2
       )
     );
   };
+
+  const handleClick = (event) => event.target.className;
 
   return (
     <>
@@ -58,11 +57,11 @@ const RoomMap = ({ bookableObjects }) => {
 };
 
 const Wrapper = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(4, 50px);
   grid-template-rows: repeat(3, 50px);
   column-gap: 0.5rem;
-  row-gap: 0.5rem;
+  row-gap: 0.5rem; */
 `;
 
 export default RoomMap;
