@@ -1,67 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import Seat from './Seat';
 import styled from 'styled-components';
-import Link from 'next/dist/client/link';
 import BookableTypeSelector from '../BookableTypeSelector';
+import ClusterOne from './ClusterOne';
+import ClusterTwo from './ClusterTwo';
+import Rooms from './Rooms';
 
 const RoomMap = ({ bookableObjects }) => {
-  const [filteredBookableObjects, setFilteredBookableObjects] = useState(
-    bookableObjects
-  );
+  //console.log('ROOMMAP', bookableObjects);
 
-  const filterByRoom = () => {
-    setFilteredBookableObjects(
-      bookableObjects.filter((object) => object.type === 'room')
-    );
-  };
-
-  const filterByDesksFloor1 = () => {
-    setFilteredBookableObjects(
-      bookableObjects.filter(
-        (object) => object.type === 'desk' && object.floor === 1
-      )
-    );
-  };
-
-  const filterByDesksFloor2 = () => {
-    setFilteredBookableObjects(
-      bookableObjects.filter(
-        (object) => object.type === 'desk' && object.floor === 2
-      )
-    );
-  };
-
-  const handleClick = (event) => event.target.className;
+  const [filter, setFilter] = useState('cluster1');
 
   return (
     <>
-      <BookableTypeSelector
-        filterByRoom={filterByRoom}
-        filterByDesksFloor1={filterByDesksFloor1}
-        filterByDesksFloor2={filterByDesksFloor2}
-      />
+      <BookableTypeSelector setFilter={setFilter} />
       <Wrapper>
-        {filteredBookableObjects.map((name) => {
-          return (
-            //takes the structure from /pages/booking/
-            <Link key={name.id} href={'/booking/' + name.name}>
-              <a>
-                <Seat name={name.name} />
-              </a>
-            </Link>
-          );
-        })}
+        {filter === 'cluster1' ? (
+          <ClusterOne bookableObjects={bookableObjects} />
+        ) : null}
+        {filter === 'cluster2' ? (
+          <ClusterTwo bookableObjects={bookableObjects} />
+        ) : null}
+        {filter === 'rooms' ? <Rooms /> : null}
       </Wrapper>
     </>
   );
 };
 
-const Wrapper = styled.div`
-  /* display: grid;
-  grid-template-columns: repeat(4, 50px);
-  grid-template-rows: repeat(3, 50px);
-  column-gap: 0.5rem;
-  row-gap: 0.5rem; */
-`;
+const Wrapper = styled.div``;
 
 export default RoomMap;
