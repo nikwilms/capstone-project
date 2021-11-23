@@ -61,8 +61,8 @@ const StyledContainer = styled.div`
 
   .leftUp {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     gap: 0.5em 0.5em;
     border: solid 2px black;
     grid-auto-flow: row;
@@ -81,8 +81,8 @@ const StyledContainer = styled.div`
 
   .rightUp {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     gap: 0.5em 0.5em;
     grid-auto-flow: row;
     border: solid 2px black;
@@ -101,8 +101,8 @@ const StyledContainer = styled.div`
 
   .leftDown {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     gap: 0.5em 0.5em;
     grid-auto-flow: row;
     border: solid 2px black;
@@ -121,8 +121,8 @@ const StyledContainer = styled.div`
 
   .rightDown {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     gap: 0.5em 0.5em;
     grid-auto-flow: row;
     border: solid 2px black;

@@ -5,7 +5,6 @@ const Desk = ({ tableName, listOfBookableNames }) => {
   const isBookable = listOfBookableNames.some(
     (table) => table.name === tableName && table.bookable === true
   );
-  console.log(isBookable);
 
   if (isBookable) {
     return (
