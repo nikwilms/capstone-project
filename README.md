@@ -1,7 +1,12 @@
-## Getting Started
+## ABOUT
+a desking booking system for the 42 Wolfsburg campus, with a possible check in/out if you are on site.
 
-A short sketch how the Application will look like, all the components are marked in grey boxes 
-https://excalidraw.com/#json=4871376708042752,-0hPfpTy_-m_iQP4iJ5W0g
+## IN PROGRESS
+- Firebase login and user registration
+- styling
+- showing who is on site
+- Check in/out with student card
+- overview of the student bookings
 
 
 ## Deploy on Vercel
